@@ -1,0 +1,54 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  background-color: #fafafa;
+  color: #333333;
+}
+
+/*
+  Boostrap Mixins and Variables are defined first.
+  Examples start at line 234.
+  Clearfix
+  For modern browsers
+  1. The space content is one way to avoid an Opera bug when the
+  contenteditable attribute is included anywhere else in the document.
+  Otherwise it causes space to appear at the top and bottom of elements
+  that are clearfixed.
+
+  2. The use of `table` rather than `block` is only necessary if using
+  `:before` to contain the top-margins of child elements.
+  Source: 
+*/
+/************************** Media queries breakpoints **************************/
+/* Extra small screen / phone */
+/* Small screen / tablet */
+/* Medium screen / desktop */
+/* Large screen / wide desktop */
+/************************** Grid system **************************/
+/* Number of columns in the grid. */
+/* Padding between columns. Gets divided in half for the left and right. */
+/************************** Centered container element **************************/
+/************************** Creates a row **************************/
+/* Generate the extra small columns */
+/* Generate the small columns */
+/* Generate the medium columns */
+/* Generate the large columns */
+/************************** Displays **************************/
+/************************** Alignment **************************/
+/* Vertical alignment */
+/* Horizontal alignment */
+/************************** Float **************************/
+/************************** Text Alignment **************************/
+/************************** Text transform **************************/
+/* Table Responsive */
+
+/*# sourceMappingURL=grid.css.map */

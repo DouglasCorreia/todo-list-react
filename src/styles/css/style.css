@@ -1,0 +1,265 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  background-color: #fafafa;
+  color: #333333;
+}
+
+/*
+  Boostrap Mixins and Variables are defined first.
+  Examples start at line 234.
+  Clearfix
+  For modern browsers
+  1. The space content is one way to avoid an Opera bug when the
+  contenteditable attribute is included anywhere else in the document.
+  Otherwise it causes space to appear at the top and bottom of elements
+  that are clearfixed.
+
+  2. The use of `table` rather than `block` is only necessary if using
+  `:before` to contain the top-margins of child elements.
+  Source: 
+*/
+/************************** Media queries breakpoints **************************/
+/* Extra small screen / phone */
+/* Small screen / tablet */
+/* Medium screen / desktop */
+/* Large screen / wide desktop */
+/************************** Grid system **************************/
+/* Number of columns in the grid. */
+/* Padding between columns. Gets divided in half for the left and right. */
+/************************** Centered container element **************************/
+/************************** Creates a row **************************/
+/* Generate the extra small columns */
+/* Generate the small columns */
+/* Generate the medium columns */
+/* Generate the large columns */
+/************************** Displays **************************/
+/************************** Alignment **************************/
+/* Vertical alignment */
+/* Horizontal alignment */
+/************************** Float **************************/
+/************************** Text Alignment **************************/
+/************************** Text transform **************************/
+/* Table Responsive */
+header {
+  background-color: #4FC3F7;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+header:before, header:after {
+  content: " ";
+  display: table;
+}
+header:after {
+  clear: both;
+}
+header .header__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+header .header__row:before, header .header__row:after {
+  content: " ";
+  display: table;
+}
+header .header__row:after {
+  clear: both;
+}
+header .header__row h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.lists {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+.lists:before, .lists:after {
+  content: " ";
+  display: table;
+}
+.lists:after {
+  clear: both;
+}
+@media (min-width: 480px) {
+  .lists {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .lists {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .lists {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .lists {
+    max-width: 1200px;
+  }
+}
+.lists .lists__form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
+  align-items: center;
+}
+.lists .lists__form:before, .lists .lists__form:after {
+  content: " ";
+  display: table;
+}
+.lists .lists__form:after {
+  clear: both;
+}
+.lists .lists__form form {
+  margin-top: 30px;
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .lists .lists__form form {
+    max-width: 66.6666666667%;
+    width: 66.6666666667%;
+  }
+}
+.lists .lists__form form input[type=text] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  font-size: 1.3em;
+}
+.lists .lists__form form input[type=submit] {
+  background-color: #4FC3F7;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 100%;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+.lists .lists_activities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 50px;
+}
+.lists .lists_activities:before, .lists .lists_activities:after {
+  content: " ";
+  display: table;
+}
+.lists .lists_activities:after {
+  clear: both;
+}
+.lists .lists_activities .activities__card {
+  max-width: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 25px;
+}
+@media (min-width: 992px) {
+  .lists .lists_activities .activities__card {
+    max-width: 66.6666666667%;
+    width: 66.6666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .lists .lists_activities .activities__card {
+    margin-left: 16.6666666667%;
+  }
+}
+.lists .lists_activities .activities__card .activities__card__info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  align-items: center;
+  margin: 0px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 15px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.lists .lists_activities .activities__card .activities__card__info:before, .lists .lists_activities .activities__card .activities__card__info:after {
+  content: " ";
+  display: table;
+}
+.lists .lists_activities .activities__card .activities__card__info:after {
+  clear: both;
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info--title {
+  max-width: 83.3333333333%;
+  width: 83.3333333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info--title h2 {
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button {
+  max-width: 16.6666666667%;
+  width: 16.6666666667%;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--delete button, .lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--done button {
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  border-radius: 100%;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--delete button {
+  background-color: #f44336;
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--done button {
+  margin-right: 15px;
+  background-color: #c9c9c9;
+  transition: all 300ms ease-in;
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--done.complete button {
+  background-color: #4CAF50;
+}
+
+/*# sourceMappingURL=style.css.map */
