@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { faTrash, faCheck, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FlipMove from "react-flip-move";
 
@@ -16,7 +16,6 @@ export default class Main extends Component {
     this.handleChanged = this.handleChanged.bind(this);
     this.addToDo = this.addToDo.bind(this);
     this.deleteToDo = this.deleteToDo.bind(this);
-    this.editToDo = this.editToDo.bind(this);
     this.completeToDo = this.completeToDo.bind(this);
   }
 
@@ -25,7 +24,7 @@ export default class Main extends Component {
     localStorage.setItem("toDoList", JSON.stringify(this.state.todos));
   }
 
-  // Quando o DOM estiver pronto, irá recuperar o state armazenado no local storage e apresentar na página
+  // Quando o DOM estiver pronto, irá recuperar o state armazenado no local storage e apresentar na página.
   componentDidMount() {
     const todos =
       JSON.parse(localStorage.getItem("toDoList")) || this.state.todos;
@@ -87,19 +86,6 @@ export default class Main extends Component {
     });
   };
 
-  editToDo = (id) => {
-    // Vai percorrer todo o vetor, a id que for igual, irá editar
-    const editToDo = this.state.todos.filter((todo) => {
-      if (todo.id === id) {
-        this.setState({
-          inputText: todo.text,
-        });
-      }
-
-      return todo;
-    });
-  };
-
   render() {
     const { todos } = this.state;
 
@@ -116,9 +102,6 @@ export default class Main extends Component {
             />
 
             <input type="submit" value="+" />
-            <button onClick={this.editToDo}>
-              <FontAwesomeIcon className="faicons" icon={faEdit} />
-            </button>
           </form>
         </div>
 
@@ -144,12 +127,6 @@ export default class Main extends Component {
                     <div className="card__info__button--delete">
                       <button onClick={() => this.deleteToDo(todo.id)}>
                         <FontAwesomeIcon className="faicons" icon={faTrash} />
-                      </button>
-                    </div>
-
-                    <div className="card__info__button--edit">
-                      <button onClick={() => this.editToDo(todo.id)}>
-                        <FontAwesomeIcon className="faicons" icon={faEdit} />
                       </button>
                     </div>
                   </div>
