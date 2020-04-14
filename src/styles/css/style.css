@@ -156,7 +156,7 @@ header .header__row h1 {
   font-size: 1.3em;
 }
 .lists .lists__form form input[type=submit] {
-  background-color: #4FC3F7;
+  background-color: #4fc3f7;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
   border: none;
   border-radius: 100%;
@@ -167,6 +167,22 @@ header .header__row h1 {
   width: 40px;
   height: 40px;
   margin-top: 20px;
+}
+.lists .lists__form form button {
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  border-radius: 100%;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: #4fc3f7;
+  margin-left: 15px;
+  position: relative;
+  top: -3px;
 }
 .lists .lists_activities {
   display: flex;
@@ -238,7 +254,9 @@ header .header__row h1 {
   display: flex;
   justify-content: flex-end;
 }
-.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--delete button, .lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--done button {
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--delete button,
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--complete button,
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--edit button {
   width: 30px;
   height: 30px;
   margin: 0px;
@@ -251,15 +269,19 @@ header .header__row h1 {
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--delete button {
+  margin-right: 15px;
   background-color: #f44336;
 }
-.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--done button {
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--complete button {
   margin-right: 15px;
   background-color: #c9c9c9;
   transition: all 300ms ease-in;
 }
-.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--done.complete button {
-  background-color: #4CAF50;
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--edit button {
+  background-color: #4fc3f7;
+}
+.lists .lists_activities .activities__card .activities__card__info .activities__card__info__button .card__info__button--complete.complete button {
+  background-color: #4caf50;
 }
 
 /*# sourceMappingURL=style.css.map */
