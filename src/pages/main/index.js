@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-
-import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FlipMove from "react-flip-move";
+
+import Todo from "../../components/todo-card";
 
 export default class Main extends Component {
   constructor(props) {
@@ -108,30 +107,14 @@ export default class Main extends Component {
         <div className="lists_activities">
           <FlipMove duration={250} easing="ease-out" style={fullWidth}>
             {todos.map((todo) => (
-              <div key={todo.id} className="activities__card">
-                <div className="activities__card__info">
-                  <div className="activities__card__info--title">
-                    <h2>{todo.text}</h2>
-                  </div>
-                  <div className="activities__card__info__button">
-                    <div
-                      className={`card__info__button--complete ${
-                        todo.complete && "complete"
-                      }`}
-                    >
-                      <button onClick={() => this.completeToDo(todo.id)}>
-                        <FontAwesomeIcon className="faicons" icon={faCheck} />
-                      </button>
-                    </div>
-
-                    <div className="card__info__button--delete">
-                      <button onClick={() => this.deleteToDo(todo.id)}>
-                        <FontAwesomeIcon className="faicons" icon={faTrash} />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Todo
+                key={todo.id}
+                id={todo.id}
+                text={todo.text}
+                completed={todo.complete}
+                completeToDo={this.completeToDo}
+                deleteToDo={this.deleteToDo}
+              />
             ))}
           </FlipMove>
         </div>
